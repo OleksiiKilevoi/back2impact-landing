@@ -74,6 +74,28 @@ p {
   padding-inline: clamp(20px, 4vw, 64px);
 }
 
+/* Shared form submission status message */
+.form-status {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-status--ok {
+  color: #1f9d57;
+}
+
+.form-status--err {
+  color: #d23b3b;
+}
+
+/* Disabled submit/input states (forms) */
+button[disabled],
+input[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 /* Shared yellow badge/pill */
 .pill {
   display: inline-block;

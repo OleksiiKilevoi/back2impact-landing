@@ -4,25 +4,37 @@ import './FAQ.css'
 const ITEMS = [
   {
     q: 'Who is Back to Impact for?',
-    a: 'Back to Impact is for Ukrainians and foreign professionals exploring work and life in Ukraine. The platform is completely free to use.',
+    a: 'Back to Impact is for Ukrainians and foreign professionals exploring work and life in Ukraine — and the platform is completely free to use.',
   },
   {
     q: 'What kinds of opportunities will I find?',
-    a: 'Jobs, internships, projects, mentorships, and community initiatives across priority recovery sectors — technology, public administration, finance, infrastructure, and social impact.',
+    a: 'International roles across priority recovery sectors: technology, public administration, finance, infrastructure, and social impact.',
   },
   {
     q: 'Is Back to Impact only for UGS students?',
     a: 'No. Back to Impact is open to all Ukrainians and foreign professionals exploring work and life in Ukraine, not only UGS students.',
   },
   {
-    q: 'How does matching work?',
-    a: "Based on your profile, interests, experience, and goals, we'll recommend relevant opportunities and connect you with organizations, initiatives, and communities.",
+    q: 'How does onboarding and matching work?',
+    a: 'Onboarding is CV-based and takes just minutes. An interest discovery chatbot then helps surface the opportunities that best fit your background and goals.',
+  },
+  {
+    q: 'What support do I get when returning to Ukraine?',
+    a: 'You receive automated arrival checklists seven days before your return date, plus guidance on practical needs — housing, banking, healthcare, transport, safety, digital services, and more.',
+  },
+  {
+    q: 'Is it safe to enter Ukraine during martial law?',
+    a: 'The platform provides safety information and details on the mandatory security training required for those entering Ukraine during martial law.',
+  },
+  {
+    q: 'How is my personal data protected?',
+    a: 'Back to Impact maintains GDPR compliance to protect your personal data.',
   },
 ]
 
 export default function FAQ() {
-  // Last item open by default to match the design.
-  const [openIndex, setOpenIndex] = useState(ITEMS.length - 1)
+  // First item open by default.
+  const [openIndex, setOpenIndex] = useState(0)
 
   return (
     <section className="faq" id="faq">

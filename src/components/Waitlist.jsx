@@ -1,6 +1,9 @@
 import './Waitlist.css'
+import { useSubscribe } from '../lib/useSubscribe'
 
 export default function Waitlist() {
+  const { status, error, handleSubmit } = useSubscribe('waitlist')
+
   return (
     <section className="waitlist" id="waitlist">
       <div className="container waitlist__inner">
@@ -10,18 +13,35 @@ export default function Waitlist() {
           new opportunities, platform launches, and community initiatives
         </p>
 
-        <form className="waitlist__form" onSubmit={(e) => e.preventDefault()}>
+        <form className="waitlist__form" onSubmit={handleSubmit}>
           <input
             className="waitlist__input"
             type="email"
+            name="email"
             placeholder="Email"
             aria-label="Email"
             required
+            disabled={status === 'loading'}
           />
-          <button className="waitlist__submit" type="submit">
-            Join
+          <button
+            className="waitlist__submit"
+            type="submit"
+            disabled={status === 'loading'}
+          >
+            {status === 'loading' ? 'Joining…' : 'Join'}
           </button>
         </form>
+
+        {status === 'success' && (
+          <p className="form-status form-status--ok" role="status">
+            Thanks! You&apos;re on the waitlist — we&apos;ll be in touch.
+          </p>
+        )}
+        {status === 'error' && (
+          <p className="form-status form-status--err" role="alert">
+            {error}
+          </p>
+        )}
       </div>
     </section>
   )
