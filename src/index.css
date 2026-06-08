@@ -1,0 +1,87 @@
+:root {
+  /* Brand palette (sampled from design) */
+  --color-bg: #ffffff;
+  --color-ink: #1e1e2d; /* headings / strong text */
+  --color-body: #5b6577; /* body / paragraph text */
+  --color-muted: #8a93a6; /* secondary text, stat labels */
+  --color-card: #f6f7f9; /* soft card background */
+  --color-card-border: #ececf1;
+  --color-page: #f4f5fb; /* light lavender page/hero background */
+  --color-accent-blue: #3b6df6; /* stat lines, primary button */
+  --color-accent-yellow: #f7cf5a; /* pills */
+  --color-input-border: #e6e8ef;
+
+  /* Typography */
+  --font-sans: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radii */
+  --radius-sm: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --container: 1320px;
+
+  color-scheme: light;
+  color: var(--color-body);
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-body);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-ink);
+  margin: 0;
+  line-height: 1.05;
+}
+
+p {
+  margin: 0;
+}
+
+/* Reusable layout container */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 64px);
+}
+
+/* Shared yellow badge/pill */
+.pill {
+  display: inline-block;
+  background: var(--color-accent-yellow);
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+}

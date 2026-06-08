@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-label="Group photo placeholder">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cdd9e5"/>
+      <stop offset="1" stop-color="#aebfcf"/>
+    </linearGradient>
+    <linearGradient id="hills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5e7d63"/>
+      <stop offset="1" stop-color="#3c5a45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="720" fill="url(#sky)"/>
+  <path d="M0 360 L240 250 L480 330 L760 210 L1040 320 L1320 240 L1600 330 L1600 720 L0 720 Z" fill="url(#hills)"/>
+  <path d="M0 470 L300 410 L620 470 L900 400 L1200 460 L1600 410 L1600 720 L0 720 Z" fill="#2f4a38" opacity="0.85"/>
+  <text x="800" y="640" text-anchor="middle" font-family="Poppins, sans-serif" font-size="34" fill="#ffffff" opacity="0.9">Replace with group photo (src/assets/group.jpg)</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-label="Photo placeholder">
+  <defs>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#efe7dd"/>
+      <stop offset="1" stop-color="#d9ccbd"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="760" fill="url(#warm)"/>
+  <circle cx="360" cy="300" r="90" fill="#c9b79f"/>
+  <circle cx="660" cy="320" r="90" fill="#c9b79f"/>
+  <rect x="230" y="430" width="540" height="220" rx="20" fill="#b8a486"/>
+  <text x="500" y="710" text-anchor="middle" font-family="Poppins, sans-serif" font-size="30" fill="#7a6a54" opacity="0.9">Replace with photo (src/assets/how-it-works.jpg)</text>
+</svg>

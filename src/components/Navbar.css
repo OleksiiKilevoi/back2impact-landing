@@ -1,0 +1,83 @@
+.navbar {
+  background: var(--color-page);
+  padding-top: 28px;
+}
+
+.navbar__bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 22px 40px;
+  box-shadow: 0 12px 30px rgba(30, 30, 45, 0.05);
+}
+
+.navbar__links {
+  display: flex;
+  gap: 36px;
+  justify-self: start;
+}
+
+.navbar__link {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.navbar__link:hover {
+  color: var(--color-ink);
+}
+
+.navbar__logo {
+  justify-self: center;
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.navbar__join {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-accent-blue);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 12px;
+  transition: background-color 0.15s ease;
+}
+
+.navbar__join:hover {
+  background: #2f5fe0;
+}
+
+@media (max-width: 860px) {
+  .navbar__bar {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'logo join'
+      'links links';
+    padding: 18px 22px;
+    gap: 16px;
+  }
+  .navbar__logo {
+    grid-area: logo;
+    justify-self: start;
+  }
+  .navbar__join {
+    grid-area: join;
+  }
+  .navbar__links {
+    grid-area: links;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

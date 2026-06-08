@@ -1,0 +1,103 @@
+.hero {
+  background: var(--color-page);
+  padding-block: clamp(56px, 9vw, 120px);
+  text-align: center;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero .pill {
+  font-weight: 700;
+  padding: 12px 26px;
+}
+
+.hero__title {
+  margin-top: 32px;
+  font-weight: 800;
+  font-size: clamp(40px, 6.2vw, 80px);
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+  color: var(--color-ink);
+  max-width: 100%;
+}
+
+/* Let the explicit <br> control the two-line layout on wide screens;
+   collapse it so the headline wraps naturally on narrow screens. */
+@media (max-width: 560px) {
+  .hero__title br {
+    display: none;
+  }
+}
+
+.hero__lead {
+  margin-top: 28px;
+  color: var(--color-muted);
+  font-size: clamp(18px, 2vw, 23px);
+  line-height: 1.5;
+  max-width: 640px;
+}
+
+.hero__form {
+  margin-top: 52px;
+  display: flex;
+  gap: 18px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.hero__input {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid var(--color-input-border);
+  border-radius: 14px;
+  padding: 22px 26px;
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--color-ink);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hero__input::placeholder {
+  color: #4b5563;
+}
+
+.hero__input:focus {
+  border-color: var(--color-accent-blue);
+  box-shadow: 0 0 0 3px rgba(59, 109, 246, 0.15);
+}
+
+.hero__submit {
+  background: var(--color-accent-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 22px 44px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.hero__submit:hover {
+  background: #2f5fe0;
+}
+
+.hero__submit:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 620px) {
+  .hero__form {
+    flex-direction: column;
+  }
+  .hero__submit {
+    padding: 20px;
+  }
+}
