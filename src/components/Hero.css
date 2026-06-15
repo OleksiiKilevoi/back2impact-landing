@@ -1,7 +1,9 @@
 .hero {
   background: var(--color-page);
-  padding-block: clamp(56px, 9vw, 120px);
+  padding-top: 98px;
+  padding-bottom: 238px;
   text-align: center;
+  position: relative;
 }
 
 .hero__inner {
@@ -11,18 +13,23 @@
 }
 
 .hero .pill {
-  font-weight: 700;
-  padding: 12px 26px;
+  padding: 8px 17px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -2%;
 }
 
 .hero__title {
-  margin-top: 32px;
+  margin-top: 16px;
   font-weight: 800;
-  font-size: clamp(40px, 6.2vw, 80px);
+  font-size: 56px;
   letter-spacing: -0.02em;
   line-height: 1.06;
   color: var(--color-ink);
-  max-width: 100%;
+  max-width: 549px;
+  font-family: 'Fixel';
+  font-weight: 600;
 }
 
 /* Let the explicit <br> control the two-line layout on wide screens;
@@ -34,29 +41,36 @@
 }
 
 .hero__lead {
-  margin-top: 28px;
+  margin-top: 32px;
   color: var(--color-muted);
-  font-size: clamp(18px, 2vw, 23px);
   line-height: 1.5;
-  max-width: 640px;
+  max-width: 523px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: -2%;
+  text-align: center;
 }
 
 .hero__form {
-  margin-top: 52px;
+  margin-top: 42px;
   display: flex;
   gap: 18px;
   width: 100%;
-  max-width: 760px;
+  max-width: 568px;
+  height: 58px;
 }
 
 .hero__input {
   flex: 1;
   background: #ffffff;
-  border: 1px solid var(--color-input-border);
+  border: none;
   border-radius: 14px;
-  padding: 22px 26px;
-  font-family: inherit;
-  font-size: 18px;
+  padding: 0 26px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -2%;
   color: var(--color-ink);
   outline: none;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
@@ -67,19 +81,21 @@
 }
 
 .hero__input:focus {
-  border-color: var(--color-accent-blue);
+  border-color: #4286F5;
   box-shadow: 0 0 0 3px rgba(59, 109, 246, 0.15);
 }
 
 .hero__submit {
-  background: var(--color-accent-blue);
+  width: 213px;
+  background: #4286F5;
   color: #ffffff;
   border: none;
-  border-radius: 14px;
-  padding: 22px 44px;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 600;
+  border-radius: 11px;
+  font-family: 'Fixel';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
   cursor: pointer;
   white-space: nowrap;
   transition: background-color 0.15s ease, transform 0.05s ease;
@@ -100,4 +116,23 @@
   .hero__submit {
     padding: 20px;
   }
+}
+
+.hero__balloon {
+  position: absolute;
+  transform: rotate(6.93deg);
+  bottom: 75px;
+  right: 66px;
+}
+
+.hero__small-cloud {
+  position: absolute;
+  top: 68px;
+  right: -22px;
+}
+
+.hero__big-cloud {
+  position: absolute;
+  bottom: 116px;
+  left: 64px;
 }

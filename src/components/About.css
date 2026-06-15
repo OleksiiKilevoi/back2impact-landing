@@ -1,6 +1,15 @@
 .about {
-  padding-block: clamp(48px, 8vw, 112px);
+  display: flex;
+  justify-content: center;
+  padding: 120px 50px;
   text-align: center;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  align-items: center;
 }
 
 /* ---- Heading block ---- */
@@ -10,23 +19,29 @@
 }
 
 .about__title {
-  font-weight: 700;
-  font-size: clamp(48px, 7vw, 88px);
-  letter-spacing: -0.02em;
-  margin-top: 28px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -3%;
+  text-align: center;
+  margin-top: 16.8px;
 }
 
 .about__lead {
   margin-top: 24px;
   color: var(--color-muted);
-  font-size: clamp(18px, 2vw, 24px);
-  line-height: 1.45;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: -2%;
+  text-align: center;
 }
 
 /* ---- Stats row ---- */
 .stats {
+  width: 100%;
+  max-width: 1152px;
   list-style: none;
-  margin: clamp(48px, 7vw, 88px) 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -48,24 +63,27 @@
 
 .stat__value {
   color: var(--color-ink);
-  font-weight: 700;
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: -1%;
 }
 
 .stat__label {
   margin-top: 14px;
   color: var(--color-muted);
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -2%;
+
 }
 
 /* ---- Group photo ---- */
-.about__photo {
-  margin: clamp(40px, 6vw, 72px) 0 0;
-}
 
 .about__photo img {
   width: 100%;
+  max-width: 1153px;
   height: auto;
   border-radius: var(--radius-lg);
   object-fit: cover;
@@ -83,4 +101,45 @@
   .stats {
     grid-template-columns: 1fr;
   }
+}
+
+.about__mission-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+  max-width: 1150.1px;
+}
+
+.about__mission-heading {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 110%;
+  letter-spacing: -3%;
+  text-align: center;
+}
+
+.about__mission-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 569.1px;
+}
+
+.about__mission-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -1%;
+  color: #22282B;
+  text-align: left;
+}
+
+.about__mission-description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: left;
 }

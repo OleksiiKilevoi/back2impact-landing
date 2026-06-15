@@ -1,5 +1,5 @@
 import './About.css'
-import groupPhoto from '../assets/group.svg'
+import groupPhoto from '../assets/group.png'
 
 const STATS = [
   { value: '350+', label: 'Scholars supported' },
@@ -11,13 +11,14 @@ const STATS = [
 export default function About() {
   return (
     <section className="about" id="about">
-      <div className="container">
+      <div className="about__container">
         <div className="about__head">
           <span className="pill">About us</span>
           <h2 className="about__title">10 years</h2>
           <p className="about__lead">
-            A decade of building Ukraine&rsquo;s next generation of leaders through
-            global education and community support.
+            A decade of building Ukraine&rsquo;s next generation of leaders
+            <br />
+            through global education and community support.
           </p>
         </div>
 
@@ -38,6 +39,27 @@ export default function About() {
             loading="lazy"
           />
         </figure>
+        <div className="about__mission-block">
+          <h3 className="about__mission-heading">
+            Our mission
+          </h3>
+          <div className="about__mission-info-block">
+            <p className="about__mission-title">
+              We aim to develop a new generation
+              <br/>
+              of Ukrainian leaders capable of creating
+              <br/>
+              a victorious and prosperous future in Ukraine
+              <br/>
+              today
+            </p>
+            <p className="about__mission-description">
+              Through mentorship, education, career guidance,
+              and empowerment for Ukrainian youth, we seek to
+              scale our impact and generate a powerful ripple effect
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )

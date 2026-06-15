@@ -9,8 +9,11 @@ const LINKS = [
 export default function Navbar() {
   return (
     <header className="navbar">
-      <div className="container">
         <div className="navbar__bar">
+          <a className="navbar__logo" href="#top" aria-label="Home">
+            Back2Impact
+          </a>
+          
           <nav className="navbar__links" aria-label="Primary">
             {LINKS.map((link) => (
               <a key={link.href} className="navbar__link" href={link.href}>
@@ -19,15 +22,12 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <a className="navbar__logo" href="#top" aria-label="Home">
-            LOGO
-          </a>
-
-          <a className="navbar__join" href="#top">
-            Join
-          </a>
+          <div className="navbar__join-container">
+            <a className="navbar__join" href="#top">
+              Join
+            </a>
+          </div>
         </div>
-      </div>
     </header>
   )
 }

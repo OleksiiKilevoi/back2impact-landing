@@ -1,5 +1,8 @@
-import './Hero.css'
-import { useSubscribe } from '../lib/useSubscribe'
+import './Hero.css';
+import { useSubscribe } from '../lib/useSubscribe';
+import balloon from '../assets/air-balloon.svg';
+import smallCloud from '../assets/small-cloud.svg';
+import bigCloud from '../assets/big-cloud.svg';
 
 export default function Hero() {
   const { status, error, handleSubmit } = useSubscribe('hero')
@@ -7,12 +10,12 @@ export default function Hero() {
   return (
     <section className="hero" id="top">
       <div className="container hero__inner">
-        <span className="pill">We are building community</span>
+        <span className="pill">Come. Make an impact here</span>
 
         <h1 className="hero__title">
-          Your expertise can help
-          <br />
-          shape Ukraine.
+          Find your role
+          <br /> 
+          in Ukraine's recovery
         </h1>
 
         <p className="hero__lead">
@@ -36,7 +39,7 @@ export default function Hero() {
             type="submit"
             disabled={status === 'loading'}
           >
-            {status === 'loading' ? 'Joining…' : 'Join the list'}
+            {status === 'loading' ? 'Joining…' : 'Get early access'}
           </button>
         </form>
 
@@ -51,6 +54,9 @@ export default function Hero() {
           </p>
         )}
       </div>
+      <img src={balloon} alt="Balloon" className="hero__balloon" />
+      <img src={smallCloud} alt="Cloud" className="hero__small-cloud" />
+      <img src={bigCloud} alt="Cloud" className="hero__big-cloud" />
     </section>
   )
 }

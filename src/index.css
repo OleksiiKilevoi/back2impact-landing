@@ -6,13 +6,13 @@
   --color-muted: #8a93a6; /* secondary text, stat labels */
   --color-card: #f6f7f9; /* soft card background */
   --color-card-border: #ececf1;
-  --color-page: #f4f5fb; /* light lavender page/hero background */
+  --color-page: #4286F514; /* light lavender page/hero background */
   --color-accent-blue: #3b6df6; /* stat lines, primary button */
   --color-accent-yellow: #f7cf5a; /* pills */
   --color-input-border: #e6e8ef;
 
   /* Typography */
-  --font-sans: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Fixel', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   /* Radii */
   --radius-sm: 16px;
@@ -30,6 +30,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'Fixel';
+    src: url('/public//fonts/FixelVariable.ttf');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 *,
@@ -103,7 +111,8 @@ input[disabled] {
   color: var(--color-ink);
   font-weight: 600;
   font-size: 16px;
-  line-height: 1;
-  padding: 11px 22px;
+  line-height: 130%;
+  letter-spacing: -2%;
+  padding: 8px 17px;
   border-radius: var(--radius-pill);
 }
