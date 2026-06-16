@@ -1,7 +1,7 @@
 :root {
   /* Brand palette (sampled from design) */
   --color-bg: #ffffff;
-  --color-ink: #1e1e2d; /* headings / strong text */
+  --color-ink: #22282B; /* headings / strong text */
   --color-body: #5b6577; /* body / paragraph text */
   --color-muted: #8a93a6; /* secondary text, stat labels */
   --color-card: #f6f7f9; /* soft card background */
@@ -33,12 +33,37 @@
 }
 
 @font-face {
-    font-family: 'Fixel';
-    src: url('/public//fonts/FixelVariable.ttf');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Fixel';
+  src: url('/public/fonts/FixelDisplay-Regular.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'Fixel';
+  src: url('/public/fonts/FixelDisplay-Medium.woff2') format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixel';
+  src: url('/public/fonts/FixelDisplay-SemiBold.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixel';
+  src: url('/public/fonts/FixelDisplay-ExtraBold.woff2') format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 *,
 *::before,

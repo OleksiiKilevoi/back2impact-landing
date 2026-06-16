@@ -22,7 +22,7 @@
 
 .hero__title {
   margin-top: 16px;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 56px;
   letter-spacing: -0.02em;
   line-height: 1.06;
@@ -67,6 +67,7 @@
   border: none;
   border-radius: 14px;
   padding: 0 26px;
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
@@ -77,7 +78,7 @@
 }
 
 .hero__input::placeholder {
-  color: #4b5563;
+  color: #22282B;
 }
 
 .hero__input:focus {
