@@ -1,8 +1,9 @@
 import './Waitlist.css'
 import { useSubscribe } from '../lib/useSubscribe'
+import Turnstile from '../lib/Turnstile'
 
 export default function Waitlist() {
-  const { status, error, handleSubmit } = useSubscribe('waitlist')
+  const { status, error, handleSubmit, turnstileRef } = useSubscribe('waitlist')
 
   return (
     <section className="waitlist" id="waitlist">
@@ -30,6 +31,7 @@ export default function Waitlist() {
           >
             {status === 'loading' ? 'Joining…' : 'Get early access'}
           </button>
+          <Turnstile handle={turnstileRef} />
         </form>
 
         {status === 'success' && (

@@ -1,11 +1,12 @@
 import './Hero.css';
 import { useSubscribe } from '../lib/useSubscribe';
+import Turnstile from '../lib/Turnstile';
 import balloon from '../assets/air-balloon.svg';
 import smallCloud from '../assets/small-cloud.svg';
 import bigCloud from '../assets/big-cloud.svg';
 
 export default function Hero() {
-  const { status, error, handleSubmit } = useSubscribe('hero')
+  const { status, error, handleSubmit, turnstileRef } = useSubscribe('hero')
 
   return (
     <section className="hero" id="top">
@@ -41,6 +42,7 @@ export default function Hero() {
           >
             {status === 'loading' ? 'Joining…' : 'Get early access'}
           </button>
+          <Turnstile handle={turnstileRef} />
         </form>
 
         {status === 'success' && (

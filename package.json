@@ -8,7 +8,12 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "vite build && wrangler pages deploy dist --project-name=back2impact"
+    "deploy": "vite build && wrangler pages deploy dist --project-name=back2impact --branch=production",
+    "worker:dev": "cd worker && wrangler dev",
+    "worker:deploy": "cd worker && wrangler deploy",
+    "worker:db:init": "cd worker && wrangler d1 execute back2impact-waitlist --remote --file=schema.sql",
+    "worker:db:init:local": "cd worker && wrangler d1 execute back2impact-waitlist --local --file=schema.sql",
+    "worker:emails": "cd worker && wrangler d1 execute back2impact-waitlist --remote --command=\"SELECT email, source, created_at FROM waitlist ORDER BY created_at DESC\""
   },
   "dependencies": {
     "react": "^19.2.6",

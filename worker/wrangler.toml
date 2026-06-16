@@ -1,0 +1,15 @@
+name = "back2impact-waitlist"
+main = "src/index.js"
+compatibility_date = "2026-05-03"
+
+# D1 database — source of truth for waitlist signups (dedup via UNIQUE(email)).
+[[d1_databases]]
+binding = "DB"
+database_name = "back2impact-waitlist"
+database_id = "fdb527af-e501-412f-b6dc-267d3e973d01"
+
+# Non-secret vars. The Turnstile *secret* is set separately:
+#   wrangler secret put TURNSTILE_SECRET
+[vars]
+# Comma-separated extra allowed origins (beyond the built-in prod/localhost list).
+ALLOWED_ORIGINS = ""
