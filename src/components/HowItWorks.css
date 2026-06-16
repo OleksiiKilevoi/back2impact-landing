@@ -1,6 +1,6 @@
 .how {
   background: #ffffff;
-  padding: 96px 50px;
+  padding: 96px 70px;
 }
 
 .how__container {
@@ -91,6 +91,8 @@
 
 /* ---- Media ---- */
 .how__media {
+  width: 540px;
+  height: 512px;
   position: relative;
   margin: 0;
 }
@@ -114,7 +116,7 @@
   background: var(--color-accent-blue);
   border-radius: 50%;
   box-shadow: 0 10px 24px rgba(59, 109, 246, 0.35);
-  transform: rotate(14.85px) translate(10px, -20px);
+  transform: rotate(14.85deg) translate(52px, -100px);
 }
 
 .how__badge-icon {

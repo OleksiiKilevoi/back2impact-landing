@@ -28,7 +28,7 @@ export default function Waitlist() {
             type="submit"
             disabled={status === 'loading'}
           >
-            {status === 'loading' ? 'Joining…' : 'Join'}
+            {status === 'loading' ? 'Joining…' : 'Get early access'}
           </button>
         </form>
 

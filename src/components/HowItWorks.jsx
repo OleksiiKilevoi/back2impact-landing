@@ -64,7 +64,7 @@ export default function HowItWorks() {
                 <path d="M14 3v5h5" fill="#cfe0ff" />
                 <path
                   d="M9 13h6M9 16h6M9 10h2"
-                  stroke="#3b6df6"
+                  stroke="#4286F5"
                   strokeWidth="1.6"
                   strokeLinecap="round"
                 />
