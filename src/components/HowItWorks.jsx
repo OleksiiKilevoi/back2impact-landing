@@ -26,9 +26,7 @@ export default function HowItWorks() {
         <div className="how__title-block">
           <span className="pill">How it works</span>
           <h2 className="how__title">
-            (Re)build your relationship
-            <br />
-            with Ukraine in 3 steps
+            (Re)build your relationship <br />with Ukraine in 3 steps
           </h2>
         </div>
         <div className="how__content-container">

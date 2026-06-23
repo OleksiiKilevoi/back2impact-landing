@@ -40,6 +40,7 @@
 }
 
 .waitlist__input {
+  display: block;
   flex: 1;
   background: #F3F5F6;
   border: none;
@@ -65,6 +66,7 @@
 }
 
 .waitlist__submit {
+  display: block;
   width: 213px;
   background: #4286F5;
   color: #ffffff;
@@ -88,8 +90,37 @@
   transform: translateY(1px);
 }
 
-@media (max-width: 620px) {
+@media (max-width: 1024px) {
+  .waitlist {
+    padding: 96px 32px;
+  }
+
+  .waitlist__title {
+    font-size: 32px;
+  }
+
+  .waitlist__lead {
+    font-size: 18px;
+  }
+
+  .waitlist__inner {
+    padding: 0px;
+  }
+
   .waitlist__form {
     flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  .waitlist__input {
+    flex: auto;
+    height: 58px;
+  }
+
+  .waitlist__submit {
+    flex: auto;
+    width: auto;
+    height: 58px;
   }
 }

@@ -43,15 +43,18 @@
   max-width: 1152px;
   list-style: none;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(24px, 4vw, 56px);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
   text-align: left;
 }
 
 .stat {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: 200px;
 }
 
 .stat__rule {
@@ -87,20 +90,6 @@
   height: auto;
   border-radius: var(--radius-lg);
   object-fit: cover;
-}
-
-/* ---- Responsive ---- */
-@media (max-width: 860px) {
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 32px;
-  }
-}
-
-@media (max-width: 440px) {
-  .stats {
-    grid-template-columns: 1fr;
-  }
 }
 
 .about__mission-block {
@@ -143,3 +132,56 @@
   letter-spacing: 0%;
   text-align: left;
 }
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 96px 0;
+  }
+
+  .about__head {
+    padding: 0 32px;
+  }
+
+  .about__title {
+    font-size: 32px;
+  }
+
+  .about__lead {
+    font-size: 18px;
+  }
+
+  .about__lead br {
+    display: none;
+  }
+
+  .stats {
+    width: 100%;
+    /* flex-direction: column; */
+    gap: 32px;
+    padding: 0 32px;
+  }
+
+  .about__mission-block {
+    flex-direction: column;
+    gap: 56px;
+    padding: 0 32px;
+  }
+
+  .about__mission-heading {
+    font-size: 32px;
+  }
+
+  .about__mission-info-block {
+    width: auto;
+  }
+
+  .about__photo {
+    margin: 0;
+  }
+}
+
+/* @media (min-width: 720px) and (max-width: 1023px) {
+  .stat {
+    min-width: 340px;
+  }
+} */

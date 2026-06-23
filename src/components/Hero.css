@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .hero .pill {
@@ -34,11 +35,6 @@
 
 /* Let the explicit <br> control the two-line layout on wide screens;
    collapse it so the headline wraps naturally on narrow screens. */
-@media (max-width: 560px) {
-  .hero__title br {
-    display: none;
-  }
-}
 
 .hero__lead {
   margin-top: 32px;
@@ -62,7 +58,9 @@
 }
 
 .hero__input {
+  display: block;
   flex: 1;
+  height: 58px;
   background: #ffffff;
   border: none;
   border-radius: 14px;
@@ -87,7 +85,9 @@
 }
 
 .hero__submit {
+  display: block;
   width: 213px;
+  height: 58px;
   background: #4286F5;
   color: #ffffff;
   border: none;
@@ -110,20 +110,12 @@
   transform: translateY(1px);
 }
 
-@media (max-width: 620px) {
-  .hero__form {
-    flex-direction: column;
-  }
-  .hero__submit {
-    padding: 20px;
-  }
-}
-
 .hero__balloon {
   position: absolute;
   transform: rotate(6.93deg);
   bottom: 75px;
   right: 66px;
+  z-index: 0;
 }
 
 .hero__small-cloud {
@@ -136,4 +128,54 @@
   position: absolute;
   bottom: 116px;
   left: 64px;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    overflow-x: hidden;
+  }
+  
+  .hero__title {
+    font-size: 32px;
+  }
+
+  .hero__lead {
+    font-size: 14px;
+  }
+
+  .hero__form {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  .hero__input {
+    flex: auto;
+  }
+
+  .hero__submit {
+    flex: auto;
+    width: 100%;
+  }
+
+  .hero__balloon {
+    width: 129.72px;
+    height: 225.68px;
+    bottom: 75px;
+    right: -4px;
+  }
+
+  .hero__small-cloud {
+    width: auto;
+    height: 39.71px;
+    top: 46px;
+    right: 0;
+  }
+
+  .hero__big-cloud {
+    width: 230px;
+    height: 99.5px;
+    bottom: 137px;
+    left: -141px;
+  }
 }

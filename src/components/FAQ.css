@@ -122,3 +122,21 @@
   letter-spacing: -1%;
   max-width: 78ch;
 }
+
+@media (max-width: 1024px) {
+  .faq {
+    padding: 96px 32px;
+  }
+
+  .faq__title {
+    font-size: 32px;
+  }
+
+  .faq__q {
+    height: auto;
+  }
+
+  .faq__q > span {
+    padding: 24px 0;
+  }
+}

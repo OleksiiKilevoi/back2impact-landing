@@ -16,9 +16,7 @@ export default function About() {
           <span className="pill">About us</span>
           <h2 className="about__title">10 years</h2>
           <p className="about__lead">
-            A decade of building Ukraine&rsquo;s next generation of leaders
-            <br />
-            through global education and community support.
+            A decade of building Ukraine&rsquo;s next generation of leaders <br />through global education and community support.
           </p>
         </div>
 

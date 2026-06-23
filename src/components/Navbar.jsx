@@ -1,4 +1,5 @@
 import './Navbar.css'
+import mobileMenuIcon from '../assets/mobile-menu-icon.svg'
 
 const LINKS = [
   { label: 'How it works', href: '#how-it-works' },
@@ -27,6 +28,10 @@ export default function Navbar() {
               Join
             </a>
           </div>
+
+          <button className="navbar__mobile-menu-btn">
+            <img src={mobileMenuIcon} className="navbar__mobile-menu-icon" />
+          </button>
         </div>
     </header>
   )

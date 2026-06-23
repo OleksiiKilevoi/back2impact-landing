@@ -74,25 +74,32 @@
   background: #2f5fe0;
 }
 
-@media (max-width: 860px) {
-  .navbar__bar {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      'logo join'
-      'links links';
-    padding: 18px 22px;
-    gap: 16px;
+.navbar__mobile-menu-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  background-color: #FAFAFA;
+  border: none;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 42px 32px 0;
   }
+
   .navbar__logo {
-    grid-area: logo;
-    justify-self: start;
+    font-size: 16px;
   }
-  .navbar__join {
-    grid-area: join;
+
+  .navbar__links,
+  .navbar__join-container {
+    display: none;
   }
-  .navbar__links {
-    grid-area: links;
-    flex-wrap: wrap;
-    gap: 20px;
+
+  .navbar__mobile-menu-btn {
+    display: flex;
   }
 }

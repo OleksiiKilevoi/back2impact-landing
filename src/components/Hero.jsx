@@ -10,6 +10,9 @@ export default function Hero() {
 
   return (
     <section className="hero" id="top">
+      <img src={balloon} alt="Balloon" className="hero__balloon" />
+      <img src={smallCloud} alt="Cloud" className="hero__small-cloud" />
+      <img src={bigCloud} alt="Cloud" className="hero__big-cloud" />
       <div className="container hero__inner">
         <span className="pill">Come. Make an impact here</span>
 
@@ -56,9 +59,6 @@ export default function Hero() {
           </p>
         )}
       </div>
-      <img src={balloon} alt="Balloon" className="hero__balloon" />
-      <img src={smallCloud} alt="Cloud" className="hero__small-cloud" />
-      <img src={bigCloud} alt="Cloud" className="hero__big-cloud" />
     </section>
   )
 }
