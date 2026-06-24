@@ -133,6 +133,19 @@
   text-align: left;
 }
 
+
+@media (min-width: 721px) and (max-width: 1000px) {
+  .stat {
+    min-width: 240px
+  }
+}
+
+@media (min-width: 841px) and (max-width: 1024px) {
+  .stat {
+    min-width: 300px
+  }
+}
+
 @media (max-width: 1024px) {
   .about {
     padding: 96px 0;

@@ -1,5 +1,6 @@
 import './Navbar.css'
 import mobileMenuIcon from '../assets/mobile-menu-icon.svg'
+import { useState } from 'react'
 
 const LINKS = [
   { label: 'How it works', href: '#how-it-works' },
@@ -8,6 +9,8 @@ const LINKS = [
 ]
 
 export default function Navbar() {
+  const [isMobileNavShowing, setIsMobileNavShowing] = useState(true);
+
   return (
     <header className="navbar">
         <div className="navbar__bar">
@@ -29,9 +32,22 @@ export default function Navbar() {
             </a>
           </div>
 
-          <button className="navbar__mobile-menu-btn">
+          <button
+            className="navbar__mobile-menu-btn"
+            type="button"
+            onClick={() => setIsMobileNavShowing(prev => !prev)}>
             <img src={mobileMenuIcon} className="navbar__mobile-menu-icon" />
           </button>
+          
+          {isMobileNavShowing && (
+            <ul className="navbar__mobile-menu">
+              {LINKS.map((link) => (
+                <a key={link.href} className="navbar__link" href={link.href}>
+                  {link.label}
+                </a>
+              ))}
+            </ul>
+          )}
         </div>
     </header>
   )
