@@ -9,7 +9,7 @@ const LINKS = [
 ]
 
 export default function Navbar() {
-  const [isMobileNavShowing, setIsMobileNavShowing] = useState(true);
+  const [isMobileNavShowing, setIsMobileNavShowing] = useState(false);
 
   return (
     <header className="navbar">
